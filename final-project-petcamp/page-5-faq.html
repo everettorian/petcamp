@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+  <title>Page 5</title>
+</head>
+
+<style>
+
+div.scrolling {
+      width: 700px;
+      height: 200px;
+      padding: 20px;
+      border: tomato solid 1px;
+      overflow: scroll;
+    }
+    .image-width {
+      width: 30%;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+    .scroll-x {
+      overflow: scroll;
+      padding-top: 20px;
+      width: 700px;
+    }
+
+.hero-image {
+      height: 100%;
+      width: 100%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      vertical-align: bottom; /* remove whitespace below image */
+    }
+
+    .accordion {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+        }
+
+        .accordion-item {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            padding: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            padding: 10px;
+            display: none;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .footer-content {
+      width: 100%;
+      background-color: #663425;
+    }
+
+</style>
+
+<body>
+  <header class="page-5">
+    <a class="logo" href="index.html"></a>
+    <nav>
+      <div class="horizontal-nav">
+        <a href="page-2-about.html">ABOUT</a>
+        <a href="page-3-reservations.html">RESERVATIONS</a>
+        <a href="page-4-boarding.html">BOARDING</a>
+        <a class="active-menu-item" href="page-5-faq.html">FAQ</a>
+        <a href="page-6-contact.html">CONTACT</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-x"></span></button>
+        <div class="dropdown-content">
+          <a href="index.html">Splash</a>
+          <a href="page-2.html">page 2</a>
+          <a href="page-3.html">page 3</a>
+          <a href="page-4.html">page 4</a>
+          <a class="active-menu-item" href="#">page 5</a>
+          <a href="page-6.html">page 6</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container">
+    <img class="hero-image" src="./assets/images/img-faq-01.jpg" />
+    </div>
+  </section>
+
+  <section style="padding: 40px">
+    <!-- TODO: add sidebar content here -->
+    <h3>Frequently Asked Questions</h3>
+
+    <div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-header">Can I bring my saint bernard who weighs 180lbs?</div>
+        <div class="accordion-content">
+            There are no breed, size, or weight restrictions at PetCamp!  The only pets that are not allowed are venomous and or/illegal pets.
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">How do I sign up for boarding?</div>
+        <div class="accordion-content">
+            Head on over to the Boarding tab to schedule a reservation.
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">Is the laundromat free?</div>
+        <div class="accordion-content">
+            Yes, all of the shared amenities are included in your stay.
+        </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">How tall is the big cat tree?</div>
+      <div class="accordion-content">
+          Over 30 feet tall!  We're very proud of the Guiness World Record we received in 2021.
+      </div>
+  </div>
+</div>
+</section>
+
+<section style="padding: 40px">
+  <!-- TODO: add sidebar content here -->
+  <h3>the petcamp story</h3>
+  <div class="scrolling">
+    <p>
+      Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+      id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+      dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+      neque, id pulvinar odio lorem non turpis.
+    </p>
+    <p>
+      Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+      id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+      dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+      neque, id pulvinar odio lorem non turpis.
+    </p>
+    <p>
+      Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+      id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+      dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+      neque, id pulvinar odio lorem non turpis.
+    </p>
+    <p>
+      Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+      id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+      dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+      neque, id pulvinar odio lorem non turpis.
+    </p>
+  </div>
+</section>
+
+<section style="padding: 40px">
+  <!-- TODO: add sidebar content here -->
+  <h3>a few of our guests</h3>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FPcXI7OG8xI?si=fqd66F9-BzWSR-wp" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/nuuTolh8rSk?si=QMdSZDjgLAQ_P6yI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/eRgNxYm-4b0?si=TVswSr5LEDMTLGfP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+</section>
+
+<script>
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach(item => {
+      item.addEventListener('click', () => {
+          item.classList.toggle('active');
+      });
+  });
+</script>
+
+  <footer class="footer-content">
+    <div class="social-icon">
+      <h5>© 2023 PetCamp | All Rights Reserved</h5>
+      <!--Instagram-->
+      <a href="" target="_blank" class="fa fa-instagram fa-lg gpadding-right" style="color: #ffffff;"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

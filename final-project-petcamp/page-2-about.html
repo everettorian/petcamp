@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+  <title>Images & Text</title>
+
+<style>
+
+div.scrolling {
+      width: 700px;
+      height: 200px;
+      padding: 20px;
+      border: tomato solid 1px;
+      overflow: scroll;
+    }
+    .image-width {
+      width: 30%;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+    .scroll-x {
+      overflow: scroll;
+      padding-top: 20px;
+      width: 700px;
+    }
+    
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #FBE76C;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+h1 {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+.footer-content {
+      width: 100%;
+      background-color: #663425;
+    }
+</style>
+
+</head>
+
+<body>
+  <header class="page-2">
+    <a class="logo" href="index.html"></a>
+    <nav>
+      <div class="horizontal-nav">
+        <a class="active-menu-item" href="#">ABOUT</a>
+        <a href="page-3-reservations.html">RESERVATIONS</a>
+        <a href="page-4-boarding.html">BOARDING</a>
+        <a href="page-5-faq.html">FAQ</a>
+        <a href="page-6-contact.html">CONTACT</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-x"></span></button>
+        <div class="dropdown-content">
+          <a href="index.html">Splash</a>
+          <a class="active-menu-item" href="#">page 2</a>
+          <a href="page-3.html">page 3</a>
+          <a href="page-4.html">page 4</a>
+          <a href="page-5.html">page 5</a>
+          <a href="page-6.html">page 6</a>
+        </div>
+      </div>
+    </nav>
+    </div>
+  </header>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="assets/images/img-about-carousel-03.jpg" style="width:100%">
+  <div class="text">Convenient Parking Right At Your Site</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="assets/images/img-about-carousel-02.jpg" style="width:100%">
+  <div class="text">State-Of-The-Art Boarding Facility On Location</div>
+</div> 
+
+<div class="mySlides fade">
+  <img src="assets/images/img-about-carousel-01.jpg" style="width:100%">
+  <div class="text">Fire Rings At Every Site</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h4>Shared Amenities</h4>
+  <ul>
+    <li>On-site boarding facility</li>
+    <li>Separate designated off-leash small and large dog park areas</li>
+    <li>Designated catexploring area</li>
+    <li>Multi-use path that circles the camp</li>
+    <li>Covered common area</li>
+    <li>Laundromat</li>
+    <li>Self-serve pet grooming facility</li>
+    <li>Natural log playground for children, adults and pets</li>
+    <li>World's Largest First Hydrant</li>
+    <li>World's Largest Cat Tree</li>
+  </ul>
+
+  <h4>Cabin Amenities</h4>
+  <ul>
+    <li>Entire campsite fenced for dogs</li>
+    <li>Covered "catio" enclosure connected to cabin for cats</li>
+    <li>Campfire ring and covered picnic table</li>
+    <li>Private bathroom with shower</li>
+    <li>Kitchenette with refrigerator</li>
+    <li>Air conditioning & heating</li>
+    <li>Parking space in fenced area large enough to accommodate 23' sprinter van or camper trailer</li>
+    <li>Parking space outside fenced area can accommodate two standard sized vehicles</li>
+  </ul>
+
+  <h4>Rustic Campsite Amenities</h4>
+  <ul>
+    <li>Entire campsite fenced for dogs</li>
+    <li>Covered "catio" enclosure connected to cabin for cats</li>
+    <li>Campfire ring and covered picnic table</li>
+    <li>Shared bathrooms & showers</li>
+    <li>Parking space in fenced area large enough to accommodate 23' sprinter van or camper trailer</li>
+    <li>Parking space outside fenced area can accommodate two standard sized vehicles</li>
+  </ul>
+
+
+  
+
+  <footer class="footer-content">
+    <div class="social-icon">
+      <h5>© 2023 PetCamp | All Rights Reserved</h5>
+      <!--Instagram-->
+      <a href="" target="_blank" class="fa fa-instagram fa-lg gpadding-right" style="color: #ffffff;"></a>
+    </div>
+  </footer>
+
+</body>
+</html> 

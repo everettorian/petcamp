@@ -1,0 +1,240 @@
+* {
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+  /* box-sizing: border-box; Width and height apply to all parts of the element: content, padding and borders */
+  /* box-sizing: content-box; Width and height only apply to the content of the element */
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Font Family 1";
+  src: url("../fonts/RooneyPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Family 2";
+  src: url("../fonts/DunbarText-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding-left: 0;
+  font-family: "Font Family 2";
+}
+
+.horizontal-nav {
+  background-color: rgb(255, 255, 255);
+  text-align: right;
+}
+
+.horizontal-nav a {
+  display: inline-block;
+  color: rgb(102, 52, 37);
+  margin: 25px 0px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.horizontal-nav a:hover {
+  transition: all 0.5s ease;
+  cursor: grab;
+  background-color: #FBE76C;
+}
+
+header a.logo {
+  transition: all 0.5s ease;
+  position: absolute;
+  display: block;
+  width: 142px;
+  height: 142px;
+  /* change dish-01.png to your loge image */
+  background: url(../images/PETCAMP_SIGN_v2.png) no-repeat 0 0;
+  background-size: contain;
+  top: 10px;
+  left: 20px;
+  z-index: 100;
+}
+
+header a.logo:hover {
+  transition: all 0.5s ease;
+  opacity: 0.8;
+}
+
+/********** BEG for dropdown menu in small screen **********/
+.dropdown {
+  transition: all 0.5s ease;
+  position: absolute;
+  display: none;
+  top: 0; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
+  right: 0px;
+  z-index: 100;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #663425;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content {
+  transition: all 0.5s ease;
+  display: none; /* set display to none, so dropdown menu won't show till hover dropdown */
+  position: absolute;
+  right: 0;
+  background-color: white;
+  /*min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;*/
+}
+
+.dropdown-content a {
+  transition: all 0.5s ease;
+  color: #663425;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content a:hover {
+  transition: all 0.5s ease;
+  background-color: #FBE76C;
+}
+
+.dropdown:hover .dropdown-content {
+  transition: all 0.5s ease;
+  display: block;
+}
+
+.dropdown:hover {
+  transition: all 0.5s ease;
+  background-color: black;
+}
+
+/* BEG styling headings */
+h1 {
+  margin: 0px 0px 1em 0px;
+  color: white;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: "Font Family 1";
+}
+
+h2 {
+  font-family: "Font Family 1";
+}
+
+h3 {
+  margin: 0px 0px 1.5em 0px;
+  color: black;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Font Family 1";
+}
+
+h4 {
+  margin: 0px 0px 0em 0px;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: black;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: "Font Family 1";
+}
+
+h5 {
+  margin: 0px 0px 0em 0px;
+  padding-left: 20px;
+  padding-top: 0px;
+  color: white;
+  font-size: .7em;
+  font-weight: bold;
+  font-family: "Font Family 2";
+}
+/* END styling headings */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.to-top {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+article > div {
+/* padding: top right bottom left */
+padding: 0px 40px 0px 40px;
+}
+
+footer > div.social-icon {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 750px) {
+
+  header a.logo {
+    height: 40px;
+  }
+
+  .horizontal-nav {
+    padding: 0 0 0 60px;
+  }
+
+  .horizontal-nav a {
+    margin: 10px 0px;
+  }
+
+  article {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+  }
+  article > div {
+    margin: 0px 40px;
+    /* padding: top right bottom left */
+    padding: 0px 0px 30px 0px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+}
+
+/********** BEG for dropdown menu in small screen **********/
+@media screen and (max-width: 500px) {
+  .horizontal-nav {
+    transition: all 0.5s ease;
+    display: none;
+  }
+
+  .dropdown {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block; 
+  }
+
+  .dropdown-content {
+    min-width: 500px;
+  }
+
+  header a.logo {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
+  header.page-2 {
+    transition: all 0.5s ease;
+    height: 100px;
+  }
+
+}
+/********** END for dropdown menu in small screen **********/

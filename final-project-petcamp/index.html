@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+  <title>Hero Screen - Muffins & Text</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .horizontal-nav {
+      background-color: white;
+    }
+
+    .hero-image {
+      height: 100%;
+      width: 100%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      vertical-align: bottom; /* remove whitespace below image */
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 7%;
+      left: 70%;
+    }
+
+    .footer-content {
+      width: 100%;
+      background-color: #663425;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- TODO: go assets/stylesheets/styles.css, look for the logo class and change the image -->
+    <a class="logo" href="index.html"></a>
+    <nav>
+      <div class="horizontal-nav">
+        <a href="page-2-about.html">ABOUT</a>
+        <a href="page-3-reservations.html">RESERVATIONS</a>
+        <a href="page-4-boarding.html">BOARDING</a>
+        <a href="page-5-faq.html">FAQ</a>
+        <a href="page-6-contact.html">CONTACT</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-x"></span></button>
+        <div class="dropdown-content">
+          <a class="active-menu-item" href="#">Splash</a>
+          <a href="page-2-about.html">ABOUT</a>
+          <a href="page-3-reservations.html">RESERVATIONS</a>
+          <a href="page-4-boarding.html">BOARDING</a>
+          <a href="page-5-faq.html">FAQ</a>
+          <a href="page-6-contact.html">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container">
+    <img class="hero-image" src="./assets/images/splash-01.jpg" />
+    <div class="hero-text">
+      <h1>The most inclusive pet-friendly campground with cabins for you and your adventure pals!</h1>
+    </div>
+    <a href="https://google.com" target="_blank">
+  </section>
+  <footer class="footer-content">
+    <div class="social-icon">
+      <h5>© 2023 PetCamp | All Rights Reserved</h5>
+      <!--Instagram-->
+      <a href="" target="_blank" class="fa fa-instagram fa-lg gpadding-right" style="color: #ffffff;"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
